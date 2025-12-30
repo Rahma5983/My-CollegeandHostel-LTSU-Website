@@ -1,4 +1,4 @@
-# My College & Hostel — LTSU Website
+# My College & Hostel — Lamrin Tech Skills University, Ropar, Punjab.
 
 A clean, responsive informational website for a college and hostel (LTSU). This repository contains the source for the public-facing site that provides information about the college, hostel facilities, admissions, contacts, and other resources.
 
