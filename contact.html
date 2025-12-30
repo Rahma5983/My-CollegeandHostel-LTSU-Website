@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | LTSU Punjab</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --primary-color: #0f172a; 
+            --accent-color: #f59e0b;  
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+
+        .navbar {
+            backdrop-filter: blur(15px);
+            background: rgba(15, 23, 42, 0.95) !important;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)),
+                        url("https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&q=80&w=1600");
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            height: 100%;
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background: #fffbeb;
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px auto;
+        }
+
+        .contact-form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        .form-control, .form-select {
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            background-color: #f8fafc;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+            background-color: white;
+        }
+        .form-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 450px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .btn-primary {
+            background: var(--accent-color);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            padding: 14px 30px;
+            border-radius: 10px;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .btn-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #0b1120;
+            color: white;
+            padding: 70px 0 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-link {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+        .footer-link:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        @media (max-width: 768px) {
+    .hero { height: auto !important; min-height: 100vh; padding: 120px 0 60px 0; }
+    .page-header { padding: 100px 0 40px 0 !important; }
+    .hero-glass-card { padding: 1.5rem !important; }
+    .application-card { margin-top: 0 !important; }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="vdv.html">
+                <span style="color: var(--accent-color)">LTS</span>U
+            </a>
+            <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="hostel.html">Hostel</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="notices.html">Notices & Events</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 active" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary px-4" href="apply.html">Apply for 2026</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container animate__animated animate__fadeInDown">
+            <h1 class="display-4 fw-bold mb-3">Get In <span style="color: var(--accent-color)">Touch</span></h1>
+            <p class="lead opacity-75 mx-auto" style="max-width: 600px;">
+                Have questions about admissions, campus life, or placements? Our team is here to help you.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-5" style="margin-top: -80px; position: relative; z-index: 2;">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="icon-circle"><i class="bi bi-geo-alt"></i></div>
+                        <h5 class="fw-bold">Campus Address</h5>
+                        <p class="text-muted small mb-0">Railmajra, Ropar,<br>Punjab 140001, India</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="icon-circle"><i class="bi bi-telephone"></i></div>
+                        <h5 class="fw-bold">Phone Support</h5>
+                        <p class="text-muted small mb-0">Admissions: +91 1800-123-4567<br>Admin: 01881-222333</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-card">
+                        <div class="icon-circle"><i class="bi bi-envelope"></i></div>
+                        <h5 class="fw-bold">Email Us</h5>
+                        <p class="text-muted small mb-0">admissions@ltsu.ac.in<br>info@ltsu.ac.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="row g-5">
+                
+                <div class="col-lg-6">
+                    <div class="contact-form-container">
+                        <h3 class="fw-bold mb-4">Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="lucky singh" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="+91 98765..." required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="lucky@example.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">I'm interested in</label>
+                                    <select class="form-select">
+                                        <option selected>Admissions (B.Tech/MBA)</option>
+                                        <option>Hostel Facilities</option>
+                                        <option>Placements</option>
+                                        <option>General Enquiry</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4 ps-2 border-start border-4 border-warning">Locate Us</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.245668460066!2d76.47480737420551!3d30.991526373081925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905550dacb273c7%3A0x6962bc698f1ce7fd!2sLamrin%20Tech%20Skills%20University%20Punjab!5e0!3m2!1sen!2sin!4v1766993129540!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="mt-4">
+                        <h5 class="fw-bold">How to Reach?</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="bi bi-train-light-rail-front me-2 text-warning"></i> Nearest Railway Station: Ropar (10km)</li>
+                            <li class="mb-2"><i class="bi bi-airplane me-2 text-warning"></i> Nearest Airport: Chandigarh (55km)</li>
+                            <li class="mb-2"><i class="bi bi-bus-front me-2 text-warning"></i> Campus located on NH-344A (Ropar-Balachaur Highway)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="fw-bold text-white mb-3"><span style="color: var(--accent-color)">LTS</span>U</h3>
+                    <p class="text-white-50">Skill Partner for a New India.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-warning fw-bold mb-4">Quick Links</h6>
+                    <a href="vdv.html" class="footer-link">Home</a>
+                    <a href="vdv1.html" class="footer-link">Academics</a>
+                    <a href="vdv3.html" class="footer-link">Hostel</a>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-warning fw-bold mb-4">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 mt-5 pt-4 text-center">
+                <p class="small text-white-50 mb-0">© 2025 Lamrin Tech Skills University</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Message Sent Successfully! Our admissions team will contact you shortly.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>

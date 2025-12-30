@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apply Now | LTSU Admissions 2025</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --primary-color: #0f172a; 
+            --accent-color: #f59e0b;  
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+
+        .navbar {
+            backdrop-filter: blur(15px);
+            background: rgba(15, 23, 42, 0.95) !important;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)),
+                        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1600");
+            background-size: cover;
+            background-position: center;
+            padding: 140px 0 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .application-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .steps-container {
+            background: #f8fafc;
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .step-circle {
+            width: 35px;
+            height: 35px;
+            background: #cbd5e1;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 5px auto;
+        }
+        .step-active .step-circle {
+            background: var(--accent-color);
+            color: #000;
+        }
+        .step-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        .step-active .step-label {
+            color: var(--primary-color);
+        }
+
+        .form-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        .form-control, .form-select {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+        }
+        .btn-next {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-next:hover {
+            background: #1e293b;
+            color: white;
+        }
+
+        .sidebar-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #fffbeb;
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        footer {
+            background: #0b1120;
+            color: white;
+            padding: 70px 0 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 80px;
+        }
+        .footer-link {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+        .footer-link:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        @media (max-width: 768px) {
+    .hero { height: auto !important; min-height: 100vh; padding: 120px 0 60px 0; }
+    .page-header { padding: 100px 0 40px 0 !important; }
+    .hero-glass-card { padding: 1.5rem !important; }
+    .application-card { margin-top: 0 !important; }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="vdv.html">
+                <span style="color: var(--accent-color)">LTS</span>U
+            </a>
+            <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="programs.html">Programs</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="hostel.html">Hostel</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="notices.html">Notices & Events</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    <a class="btn btn-primary px-4 ms-lg-3" href="apply.html">Apply for 2026</a>
+                    <li class="nav-item ms-lg-3">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container animate__animated animate__fadeInDown">
+            <h1 class="display-5 fw-bold mb-2">Admissions Open <span style="color: var(--accent-color)">2026</span></h1>
+            <p class="opacity-75">Take the first step towards a global career. Application Deadline: 31st Jan, 2026.</p>
+        </div>
+    </header>
+
+    <div class="container pb-5">
+        <div class="row">
+            
+            <div class="col-lg-8">
+                <div class="application-card animate__animated animate__fadeInUp">
+                    
+                    <div class="steps-container">
+                        <div class="row text-center">
+                            <div class="col-4 step-active">
+                                <div class="step-circle">1</div>
+                                <div class="step-label">Program</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="step-circle">2</div>
+                                <div class="step-label">Personal</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="step-circle">3</div>
+                                <div class="step-label">Review</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 p-md-5">
+                        <h4 class="fw-bold mb-4">Select Your Program</h4>
+                        
+                        <form id="applyForm">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <label class="form-label">Level of Study <span class="text-danger">*</span></label>
+                                    <select class="form-select" required>
+                                        <option value="" selected disabled>Choose Level...</option>
+                                        <option>Undergraduate (B.Tech/BBA/B.Pharma)</option>
+                                        <option>Postgraduate (MBA/M.Tech)</option>
+                                        <option>Diploma / Certification</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Course Preference 1 <span class="text-danger">*</span></label>
+                                    <select class="form-select" required>
+                                        <option value="" selected disabled>Select Course...</option>
+                                        <option>B.Tech Computer Science (IBM)</option>
+                                        <option>B.Tech Mechanical (Tata Tech)</option>
+                                        <option>MBA Business Analytics</option>
+                                        <option>B.Pharma</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Course Preference 2</label>
+                                    <select class="form-select">
+                                        <option value="" selected disabled>Select Course...</option>
+                                        <option>B.Tech Computer Science (IBM)</option>
+                                        <option>B.Tech Mechanical (Tata Tech)</option>
+                                        <option>MBA Business Analytics</option>
+                                        <option>B.Pharma</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <hr class="my-2 opacity-25">
+                                </div>
+
+                                <h5 class="fw-bold mb-2">Basic Information</h5>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter first name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter last name" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" placeholder="student@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Mobile Number <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light">+91</span>
+                                        <input type="tel" class="form-control" placeholder="9876543210" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">State of Residence</label>
+                                    <select class="form-select">
+                                        <option>Punjab</option>
+                                        <option>Haryana</option>
+                                        <option>Himachal Pradesh</option>
+                                        <option>Delhi / NCR</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label small text-muted" for="terms">
+                                            I agree to the <a href="#" class="text-primary">Terms & Conditions</a> and authorize LTSU to contact me regarding my application.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-4 text-end">
+                                    <button type="submit" class="btn btn-next px-5">Submit Application <i class="bi bi-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-5 mt-lg-0">
+                <div class="sidebar-box mt-lg-5">
+                    <h5 class="fw-bold mb-4">Need Help Applying?</h5>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <p class="small text-muted mb-0">Call Admission Cell</p>
+                            <h6 class="fw-bold">1800-123-4567</h6>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
+                        <div>
+                            <p class="small text-muted mb-0">WhatsApp Us</p>
+                            <h6 class="fw-bold">+91 98765-43210</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box bg-dark text-white">
+                    <h5 class="fw-bold text-warning mb-3">Important Dates</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3 d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-2">
+                            <span>Apps Open</span>
+                            <span class="text-warning">1st Dec 2025</span>
+                        </li>
+                        <li class="mb-3 d-flex justify-content-between border-bottom border-secondary border-opacity-25 pb-2">
+                            <span>Deadline</span>
+                            <span class="text-warning">31st Jan 2026</span>
+                        </li>
+                        <li class="d-flex justify-content-between">
+                            <span>Session Starts</span>
+                            <span class="text-warning">Aug 2026</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box text-center">
+                    <i class="bi bi-shield-check fs-1 text-success mb-3"></i>
+                    <h5 class="fw-bold">100% Secure</h5>
+                    <p class="small text-muted">Your personal data is encrypted and secure with us.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="fw-bold text-white mb-3"><span style="color: var(--accent-color)">LTS</span>U</h3>
+                    <p class="text-white-50">Skill Partner for a New India.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-warning fw-bold mb-4">Quick Links</h6>
+                    <a href="vdv.html" class="footer-link">Home</a>
+                    <a href="vdv1.html" class="footer-link">Academics</a>
+                    <a href="hostel.html" class="footer-link">Hostel</a>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-warning fw-bold mb-4">Connect</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 mt-5 pt-4 text-center">
+                <p class="small text-white-50 mb-0">© 2025 Lamrin Tech Skills University</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Application Submitted Successfully! Your Reference ID is LTSU-2025-8892. Check your email for next steps.");
+            this.reset();
+        });
+    </script>
+</body>
+</html>

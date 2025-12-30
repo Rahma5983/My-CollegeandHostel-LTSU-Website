@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notices & Events | LTSU Punjab</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --primary-color: #0f172a; 
+            --accent-color: #f59e0b;  
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+
+        .navbar {
+            backdrop-filter: blur(15px);
+            background: rgba(15, 23, 42, 0.95) !important;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)),
+                        url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=1600");
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .notice-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .notice-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .notice-date-box {
+            background: #f1f5f9;
+            color: var(--primary-color);
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            min-width: 70px;
+        }
+
+        .notice-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .badge-exam { background: #fee2e2; color: #dc2626; }
+        .badge-general { background: #e0f2fe; color: #0284c7; }
+        .badge-event { background: #fef3c7; color: #d97706; }
+        .badge-hostel { background: #dcfce7; color: #15803d; } /* Added Green for Hostel */
+
+        .event-card {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .event-img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 10px;
+        }
+        
+        .modal-header {
+            background: var(--primary-color);
+            color: white;
+        }
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, 0.25);
+        }
+        .table-schedule thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            background: #0b1120;
+            color: white;
+            padding: 70px 0 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-link {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+        .footer-link:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        @media (max-width: 768px) {
+    .hero { height: auto !important; min-height: 100vh; padding: 120px 0 60px 0; }
+    .page-header { padding: 100px 0 40px 0 !important; }
+    .hero-glass-card { padding: 1.5rem !important; }
+    .application-card { margin-top: 0 !important; }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="vdv.html">
+                <span style="color: var(--accent-color)">LTS</span>U
+            </a>
+            <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="programs.html">Programs</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="hostel.html">Hostel</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="notices.html">Notices & Events</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    <a class="btn btn-primary px-4 ms-lg-3" href="apply.html">Apply for 2026</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container animate__animated animate__fadeInDown">
+            <h1 class="display-4 fw-bold mb-3">Campus <span style="color: var(--accent-color)">Updates</span></h1>
+            <p class="lead opacity-75 mx-auto" style="max-width: 600px;">
+                Stay informed with the latest announcements, exam schedules, and upcoming events.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <div class="col-lg-8">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="fw-bold">Latest Announcements</h3>
+                    </div>
+
+                    <div class="notice-card" data-bs-toggle="modal" data-bs-target="#noticeModal"
+                         data-title="Final Semester Examination Schedule Dec 2025"
+                         data-date="24 Dec, 2025"
+                         data-body="The final datesheet for B.Tech (CSE, ME) and MBA 3rd Semester has been released. Exams will commence from Jan 10th. Students must clear their dues to download admit cards."
+                         data-file="Datesheet_Dec2025.pdf">
+                        <div class="d-flex align-items-center">
+                            <div class="notice-date-box me-3">
+                                <div class="fw-bold small">DEC</div>
+                                <div class="fs-4 fw-bold">24</div>
+                            </div>
+                            <div>
+                                <span class="notice-badge badge-exam mb-1 d-inline-block">Examination</span>
+                                <h5 class="fw-bold mb-1">Final Semester Examination Schedule Released</h5>
+                                <p class="text-muted small mb-0">Click to view full datesheet and instructions.</p>
+                            </div>
+                            <div class="ms-auto d-none d-md-block">
+                                <i class="bi bi-chevron-right text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notice-card" data-bs-toggle="modal" data-bs-target="#noticeModal"
+                         data-title="Winter Vacation Announcement"
+                         data-date="20 Dec, 2025"
+                         data-body="The university campus will remain closed for Winter Break from 1st Jan 2026 to 15th Jan 2026. Administrative blocks will remain open with reduced staff."
+                         data-file="Circular_WinterBreak.pdf">
+                        <div class="d-flex align-items-center">
+                            <div class="notice-date-box me-3">
+                                <div class="fw-bold small">DEC</div>
+                                <div class="fs-4 fw-bold">20</div>
+                            </div>
+                            <div>
+                                <span class="notice-badge badge-general mb-1 d-inline-block">General</span>
+                                <h5 class="fw-bold mb-1">Winter Vacation Announcement</h5>
+                                <p class="text-muted small mb-0">Important dates regarding campus closure.</p>
+                            </div>
+                            <div class="ms-auto d-none d-md-block">
+                                <i class="bi bi-chevron-right text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notice-card" data-bs-toggle="modal" data-bs-target="#noticeModal"
+                         data-title="IBM Hackathon Registration"
+                         data-date="18 Dec, 2025"
+                         data-body="Registrations are now open for the Annual IBM Code-a-Thon. First prize includes a MacBook Pro and internship opportunity at IBM Bangalore."
+                         data-file="Hackathon_Brochure.pdf">
+                        <div class="d-flex align-items-center">
+                            <div class="notice-date-box me-3">
+                                <div class="fw-bold small">DEC</div>
+                                <div class="fs-4 fw-bold">18</div>
+                            </div>
+                            <div>
+                                <span class="notice-badge badge-event mb-1 d-inline-block">Event</span>
+                                <h5 class="fw-bold mb-1">IBM Hackathon Registration Open</h5>
+                                <p class="text-muted small mb-0">Win internships and exciting prizes.</p>
+                            </div>
+                            <div class="ms-auto d-none d-md-block">
+                                <i class="bi bi-chevron-right text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notice-card" data-bs-toggle="modal" data-bs-target="#noticeModal"
+                        data-title="Hostel Fee Deadline Extended"
+                        data-date="15 Dec, 2025"
+                        data-body="Due to multiple requests from parents, the last date for submitting the Hostel Fee for the upcoming semester has been extended to 30th December without late fee."
+                        data-file="Fee_Notice.pdf">
+                        <div class="d-flex align-items-center">
+                            <div class="notice-date-box me-3">
+                                <div class="fw-bold small">DEC</div>
+                                <div class="fs-4 fw-bold">15</div>
+                            </div>
+                            <div>
+                                <span class="notice-badge badge-hostel mb-1 d-inline-block">Hostel</span>
+                                <h5 class="fw-bold mb-1">Hostel Fee Deadline Extended</h5>
+                                <p class="text-muted small mb-0">Last date to submit fees without penalty.</p>
+                            </div>
+                            <div class="ms-auto d-none d-md-block">
+                                <i class="bi bi-chevron-right text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4 ps-2 border-start border-4 border-warning">Upcoming Events</h4>
+                    
+                    <div class="event-card">
+                        <img src="https://www.echelonedge.com/wp-content/uploads/2023/06/National-Technology-Week-feature.png" class="event-img" alt="Tech Fest">
+                        <div class="p-3">
+                            <div class="text-warning small fw-bold mb-1">JAN 15, 2026</div>
+                            <h5 class="fw-bold mb-2">Tech-Nova 2026</h5>
+                            <p class="small text-white-50 mb-3">Annual technical festival featuring robotics, coding, and gaming.</p>
+                            <button class="btn btn-sm btn-light fw-bold w-100" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <img src="https://media.istockphoto.com/id/1402084914/photo/cricket-ball-on-top-of-cricket-bat-on-green-grass-of-cricket-ground-background.jpg?s=612x612&w=0&k=20&c=PSz4n0BZ8sJL9uN9K3zF3Ay7PBakRMf9uL5tkz7QJ_k=" class="event-img" alt="Sports">
+                        <div class="p-3">
+                            <div class="text-warning small fw-bold mb-1">FEB 10, 2026</div>
+                            <h5 class="fw-bold mb-2">Inter-College Cricket</h5>
+                            <p class="small text-white-50 mb-3">LTSU vs Punjab University. Come support your team!</p>
+                            <button class="btn btn-sm btn-outline-light fw-bold w-100" data-bs-toggle="modal" data-bs-target="#scheduleModal">View Schedule</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="fw-bold text-white mb-3"><span style="color: var(--accent-color)">LTS</span>U</h3>
+                    <p class="text-white-50">Skill Partner for a New India.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-warning fw-bold mb-4">Quick Links</h6>
+                    <a href="vdv.html" class="footer-link">Home</a>
+                    <a href="vdv1.html" class="footer-link">Academics</a>
+                    <a href="hostel.html" class="footer-link">Hostel</a>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-warning fw-bold mb-4">Contact</h6>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3"><i class="bi bi-geo-alt me-2 text-warning"></i> Railmajra, Ropar</li>
+                        <li class="mb-3"><i class="bi bi-envelope me-2 text-warning"></i> registrar@ltsu.ac.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 mt-5 pt-4 text-center">
+                <p class="small text-white-50 mb-0">© 2025 Lamrin Tech Skills University</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="noticeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Notice Title</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-calendar-event text-warning me-2"></i>
+                        <span class="text-muted small fw-bold" id="modalDate">Date</span>
+                    </div>
+                    
+                    <div class="bg-light p-4 rounded mb-4 border">
+                        <p class="mb-0" id="modalBody" style="white-space: pre-line;">Notice content...</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted small"><i class="bi bi-paperclip me-1"></i> <span id="modalFile">file.pdf</span></span>
+                        <button class="btn btn-primary"><i class="bi bi-download me-2"></i>Download Attachment</button>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Register for Tech-Nova 2026</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted small mb-3">Fill in your details to reserve your spot.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Roll Number</label>
+                            <input type="text" class="form-control" placeholder="Ex: 22CSE045">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Branch/Course</label>
+                            <select class="form-select">
+                                <option selected>Select Branch</option>
+                                <option>B.Tech CSE</option>
+                                <option>B.Tech ME</option>
+                                <option>MBA</option>
+                                <option>B.Pharma</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold small">Email Address</label>
+                            <input type="email" class="form-control" placeholder="student@ltsu.ac.in">
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="button" class="btn btn-primary">Confirm Registration</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Inter-College Cricket Fixtures</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold mb-3 text-warning">Match Schedule - 10th Feb</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-schedule">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Match</th>
+                                    <th>Venue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>09:00 AM</td>
+                                    <td>LTSU vs Chitkara</td>
+                                    <td>Ground A</td>
+                                </tr>
+                                <tr>
+                                    <td>12:30 PM</td>
+                                    <td>LPU vs CU</td>
+                                    <td>Ground B</td>
+                                </tr>
+                                <tr>
+                                    <td>03:00 PM</td>
+                                    <td><span class="badge bg-warning text-dark">FINALS</span> Winner A vs Winner B</td>
+                                    <td>Main Stadium</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert alert-light border mt-3 small">
+                        <i class="bi bi-info-circle-fill text-primary me-2"></i> Players must report to the ground 30 minutes before the match.
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-sm btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-sm btn-primary ms-2"><i class="bi bi-download me-1"></i> PDF Schedule</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const noticeModal = document.getElementById('noticeModal')
+        noticeModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget
+            
+            const title = button.getAttribute('data-title')
+            const date = button.getAttribute('data-date')
+            const body = button.getAttribute('data-body')
+            const file = button.getAttribute('data-file')
+
+            noticeModal.querySelector('#modalTitle').textContent = title
+            noticeModal.querySelector('#modalDate').textContent = date
+            noticeModal.querySelector('#modalBody').textContent = body
+            noticeModal.querySelector('#modalFile').textContent = file
+        })
+    </script>
+</body>
+</html>

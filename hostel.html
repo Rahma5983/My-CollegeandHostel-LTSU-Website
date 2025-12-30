@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hostel Facilities | LTSU Punjab</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <style>
+        :root {
+            --primary-color: #0f172a; 
+            --accent-color: #f59e0b;  
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e293b;
+            background-color: #f8fafc;
+        }
+
+        .navbar {
+            backdrop-filter: blur(15px);
+            background: rgba(15, 23, 42, 0.95) !important;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)),
+                        url("https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&q=80&w=1600");
+            background-size: cover;
+            background-position: center;
+            padding: 160px 0 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .room-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            background: white;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .room-img {
+            height: 240px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .amenity-badge {
+            font-size: 0.75rem;
+            background: #f1f5f9;
+            color: var(--text-muted);
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            height: 100%;
+            transition: 0.3s;
+        }
+        .feature-box:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+        .feature-box:hover .icon-circle {
+            background: rgba(255,255,255,0.2);
+            color: var(--accent-color);
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: #fffbeb;
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 20px auto;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 10px;
+        }
+        .btn-outline-primary {
+            border: 2px solid var(--accent-color);
+            color: #000; 
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 10px;
+        }
+        .btn-outline-primary:hover {
+            background: var(--accent-color);
+            color: black;
+        }
+
+        footer {
+            background: #0b1120;
+            color: white;
+            padding: 70px 0 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .footer-link {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+        .footer-link:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .modal-header {
+            background: var(--primary-color);
+            color: white;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, 0.25);
+        }
+
+        @media (max-width: 768px) {
+    .hero { height: auto !important; min-height: 100vh; padding: 120px 0 60px 0; }
+    .page-header { padding: 100px 0 40px 0 !important; }
+    .hero-glass-card { padding: 1.5rem !important; }
+    .application-card { margin-top: 0 !important; }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="vdv.html">
+                <span style="color: var(--accent-color)">LTS</span>U
+            </a>
+            <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="programs.html">Programs</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="hostel.html">Hostel</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="notices.html">Notices & Events</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    <a class="btn btn-primary px-4 ms-lg-3" href="apply.html">Apply for 2026</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container animate__animated animate__fadeInDown">
+            <h1 class="display-4 fw-bold mb-3">Home Away From <span style="color: var(--accent-color)">Home</span></h1>
+            <p class="lead opacity-75 mx-auto" style="max-width: 600px;">
+                Secure, modern, and comfortable living spaces designed for student success.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-warning fw-bold text-uppercase">World Class Facilities</h6>
+                <h2 class="fw-bold">Why Students Love Our Campus</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="icon-circle"><i class="bi bi-wifi"></i></div>
+                        <h5 class="fw-bold">High-Speed Wi-Fi</h5>
+                        <p class="small opacity-75 mb-0">24/7 Connectivity across all blocks.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="icon-circle"><i class="bi bi-cup-hot"></i></div>
+                        <h5 class="fw-bold">Hygienic Mess</h5>
+                        <p class="small opacity-75 mb-0">Nutritious meals (Veg/Non-Veg).</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+                        <h5 class="fw-bold">24x7 Security</h5>
+                        <p class="small opacity-75 mb-0">Biometric entry & CCTV surveillance.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="feature-box">
+                        <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
+                        <h5 class="fw-bold">Gym & Sports</h5>
+                        <p class="small opacity-75 mb-0">Indoor courts and fitness center.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-between align-items-end mb-5">
+                <div class="col-md-8">
+                    <h2 class="fw-bold">Accommodation Options</h2>
+                    <p class="text-muted">Choose the room type that fits your lifestyle and budget.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-card">
+                        <img src="https://risingstarhostel.com/wp-content/uploads/2024/03/PRB_5855-scaled.jpg" class="room-img" alt="Single Room">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Premium Single</h4>
+                            <div class="mb-3">
+                                <span class="amenity-badge">AC Available</span>
+                                <span class="amenity-badge">Attached Washroom</span>
+                                <span class="amenity-badge">Study Desk</span>
+                            </div>
+                            <p class="text-muted small">Perfect for students who prefer privacy and a quiet environment for focused study.</p>
+                            <hr class="opacity-25">
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#feeModal"
+                                    data-room="Premium Single Room"
+                                    data-price="₹1,25,000"
+                                    data-info="Includes Mess, Laundry (20kg/month), and Electricity up to 50 units.">
+                                    Check Fees
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-card">
+                        <div class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark">Most Popular</div>
+                        <img src="https://risingstarhostel.com/wp-content/uploads/2023/06/ASH_5835-scaled.jpg" class="room-img" alt="Double Room">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Twin Sharing</h4>
+                            <div class="mb-3">
+                                <span class="amenity-badge">AC / Non-AC</span>
+                                <span class="amenity-badge">Balcony</span>
+                                <span class="amenity-badge">2 Wardrobes</span>
+                            </div>
+                            <p class="text-muted small">Spacious room shared by two. Balanced environment for socialising and studying.</p>
+                            <hr class="opacity-25">
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#feeModal"
+                                    data-room="Twin Sharing Room"
+                                    data-price="₹95,000"
+                                    data-info="Includes Mess, High-Speed Internet, and Common Room Access.">
+                                    Check Fees
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="room-card">
+                        <img src="https://risingstarhostel.com/wp-content/uploads/2023/06/ASH_5878-scaled.jpg" class="room-img" alt="Triple Room">
+                        <div class="p-4">
+                            <h4 class="fw-bold">Triple Comfort</h4>
+                            <div class="mb-3">
+                                <span class="amenity-badge">Budget Friendly</span>
+                                <span class="amenity-badge">Common Washroom</span>
+                                <span class="amenity-badge">Cooler</span>
+                            </div>
+                            <p class="text-muted small">Economical choice. Great for making friends and group studies.</p>
+                            <hr class="opacity-25">
+                            <div class="d-grid">
+                                <button class="btn btn-outline-primary" 
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#feeModal"
+                                    data-room="Triple Sharing Room"
+                                    data-price="₹75,000"
+                                    data-info="Includes Mess charges. Laundry service available at extra cost.">
+                                    Check Fees
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: var(--primary-color);">
+        <div class="container text-center text-white">
+            <h2 class="fw-bold mb-3">Ready to Move In?</h2>
+            <p class="text-white-50 mb-4">Hostel seats are allocated on a first-come, first-served basis. Secure your spot today.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-warning fw-bold px-4 py-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                    <i class="bi bi-calendar-check me-2"></i>Book Hostel Seat
+                </button>
+                <button class="btn btn-outline-light px-4 py-3" data-bs-toggle="modal" data-bs-target="#wardenModal">
+                    <i class="bi bi-person-badge me-2"></i>Contact Warden
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="fw-bold text-white mb-3"><span style="color: var(--accent-color)">LTS</span>U</h3>
+                    <p class="text-white-50">Empowering the youth of Punjab with industry-aligned skills and global opportunities.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-warning fw-bold mb-4">Quick Links</h6>
+                    <a href="vdv.html" class="footer-link">Home</a>
+                    <a href="vdv1.html" class="footer-link">Academics</a>
+                    <a href="hostel.html" class="footer-link">Hostel</a>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-warning fw-bold mb-4">Address</h6>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3"><i class="bi bi-geo-alt me-2 text-warning"></i> Railmajra, Ropar, Punjab</li>
+                        <li class="mb-3"><i class="bi bi-phone me-2 text-warning"></i> +91 1800-123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary border-opacity-25 mt-5 pt-4 text-center">
+                <p class="small text-white-50 mb-0">© 2025 Lamrin Tech Skills University</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="feeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="modalRoomTitle">Room Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <div class="display-6 fw-bold text-warning mb-2" id="modalPrice">₹0</div>
+                    <p class="text-muted small mb-4">Per Academic Year</p>
+                    
+                    <div class="bg-light p-3 rounded text-start">
+                        <h6 class="fw-bold mb-2">Inclusions:</h6>
+                        <p class="mb-0 text-secondary" id="modalInfo">Loading details...</p>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center pb-4">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Reserve Accommodation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted small mb-3">Please fill out the details below. Room allocation is subject to availability.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label fw-bold small">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Enter student name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Student ID / Roll No.</label>
+                                <input type="text" class="form-control" placeholder="Ex: 22CSE101">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Semester</label>
+                                <select class="form-select">
+                                    <option>1st Sem</option>
+                                    <option>2nd Sem</option>
+                                    <option>3rd Sem</option>
+                                    <option>4th Sem</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold small">Preferred Room Type</label>
+                                <select class="form-select">
+                                    <option>Twin Sharing (Most Popular)</option>
+                                    <option>Premium Single</option>
+                                    <option>Triple Comfort</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-bold small">Hostel Preference</label>
+                                <div class="d-flex gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="hostelType" id="boysHostel" checked>
+                                        <label class="form-check-label" for="boysHostel">Boys Hostel</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="hostelType" id="girlsHostel">
+                                        <label class="form-check-label" for="girlsHostel">Girls Hostel</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="button" class="btn btn-primary w-100 py-2" data-bs-dismiss="modal" onclick="alert('Request submitted! Warden will contact you shortly.')">Submit Request</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="wardenModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Warden Contact Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item p-3">
+                            <h6 class="fw-bold mb-1">Chief Warden Office</h6>
+                            <p class="text-muted small mb-2"><i class="bi bi-clock me-1"></i> 9:00 AM - 5:00 PM</p>
+                            <a href="tel:+919876543210" class="btn btn-sm btn-outline-dark"><i class="bi bi-telephone me-2"></i>+91 98765 43210</a>
+                        </div>
+                        <div class="list-group-item p-3">
+                            <h6 class="fw-bold mb-1">Boys Hostel Warden (Block C)</h6>
+                            <p class="text-muted small mb-2">Mr. Gurpreet Singh</p>
+                            <a href="tel:+919876543211" class="btn btn-sm btn-outline-primary"><i class="bi bi-telephone me-2"></i>+91 98765 43211</a>
+                        </div>
+                        <div class="list-group-item p-3">
+                            <h6 class="fw-bold mb-1">Girls Hostel Warden (Block A)</h6>
+                            <p class="text-muted small mb-2">Ms. Anita Sharma</p>
+                            <a href="tel:+919876543212" class="btn btn-sm btn-outline-primary"><i class="bi bi-telephone me-2"></i>+91 98765 43212</a>
+                        </div>
+                        <div class="list-group-item p-3 bg-light">
+                            <h6 class="fw-bold text-danger mb-1">Emergency Helpline (24/7)</h6>
+                            <p class="text-muted small mb-2">Medical & Security</p>
+                            <a href="tel:+91112" class="btn btn-sm btn-danger"><i class="bi bi-exclamation-triangle-fill me-2"></i>Call Emergency</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Existing script for Fee Modal
+        const feeModal = document.getElementById('feeModal')
+        feeModal.addEventListener('show.bs.modal', event => {
+           
+            const button = event.relatedTarget
+
+            const roomType = button.getAttribute('data-room')
+            const price = button.getAttribute('data-price')
+            const info = button.getAttribute('data-info')
+
+            feeModal.querySelector('#modalRoomTitle').textContent = roomType
+            feeModal.querySelector('#modalPrice').textContent = price
+            feeModal.querySelector('#modalInfo').textContent = info
+        })
+    </script>
+</body>
+</html>
