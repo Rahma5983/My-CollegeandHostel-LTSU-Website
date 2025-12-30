@@ -129,15 +129,10 @@ Group & credits
 - Project type: Group project
 - Program: L&T Edutech — Learning Program (this project was created as part of the program's coursework/assignment)
 - Group members: (Add group member names and GitHub handles here)
-  - Rahma5983 — (maintainer)
-  - Member 2 — @username
-  - Member 3 — @username
-  - ...
-- Instructor / Mentor: (Add instructor or mentor name if desired)
-
-Notes for instructors / reviewers
-- This repository was prepared and submitted as a part of L&T Edutech Learning Program deliverables.
-- If you need a packaged build, CI workflow, or documentation improvements, open an issue or a PR.
+  - Rahma Naqui
+  - Aishwarya Ray
+  - Sakshi Yadav
+  - Neha Singh
 
 License
 -------
