@@ -6,19 +6,14 @@ This project is a group project which we created as part of the L&T Edutech Lear
 
 Table of Contents
 - About
-- Quick demo
 - Features
 - Tech stack
-- Project status
 - Installation & local development
   - Static site
-  - Node / frontend toolchain (if applicable)
-- Project structure
-- Deployment
-- How to contribute
+- Project Structure 
 - Group & credits
-- License
 - Contact
+- Acknowledgement 
 
 About
 -----
