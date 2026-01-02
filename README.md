@@ -22,8 +22,8 @@ About
 This repository holds the website files for "My College & Hostel — LTSU". The goal is to provide an accessible, mobile-friendly site that presents college and hostel information, including rules, amenities, admission procedure, and contact details for prospective students and parents.
 
 Quick demo
-----------
-- Live site: (add your live URL here)
+---------
+- Live site: (https://my-collegeand-hostel-ltsu-website.vercel.app/)
 
 
 Features
