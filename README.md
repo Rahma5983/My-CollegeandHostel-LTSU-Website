@@ -61,7 +61,7 @@ Accessible HTML structure and semantic markup
 Lightweight and fast: no unnecessary dependencies unless using a framework
 
 
-Tech stack
+## Tech stack
 
 List the stack actually used in the project (edit as needed). Typical options:
 
@@ -74,7 +74,7 @@ Javascript
 Bootstrap
 
 
-Installation & local development
+## Installation & local development
 
 Pick the set of instructions that matches your project setup.
 
@@ -90,7 +90,7 @@ git clone https://github.com/Rahma5983/My-CollegeandHostel-LTSU-Website.git
 
 
 
-Project structure
+## Project structure
 
 / (root)
 
@@ -110,13 +110,13 @@ README.md
 
 
 
-Group & credits
+## Group & credits
 
 Project type: Group project
 
 Program: L&T Edutech — Learning Program (this project was created as part of the program's coursework/assignment)
 
-Group members:
+## Group members:
 
 Rahma Naqui
 
@@ -127,17 +127,17 @@ Sakshi Yadav
 Neha Singh
 
 
-Instructor/ Program
+## Instructor/ Program
 
 NarendraKumar Gopineedi Sir
 
 
 
-Contact
+## Contact
 
 Repository owner / maintainer: Rahma5983
 
-Acknowledgements
+## Acknowledgements
 
 Thanks to L&T Edutech for providing the learning program and the assignment.
 Improve this
