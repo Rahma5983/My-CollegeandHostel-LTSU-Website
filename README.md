@@ -6,7 +6,7 @@ A clean, responsive informational website for a college and hostel (LTSU). This 
 
 This project is a group project which we created as part of the L&T Edutech Learning Program.
 
-Table of Contents
+## Table of Contents
 
 About
 
@@ -28,16 +28,16 @@ Contact
 Acknowledgement
 
 
-About
+## About
 
 This repository holds the website files for "My College & Hostel — LTSU". The goal is to provide an accessible, mobile-friendly site that presents college and hostel information, including rules, amenities, admission procedure, and contact details for prospective students and parents.
 
-Quick demo
+## Quick demo
 
 Live site: (https://my-collegeand-hostel-ltsu-website.vercel.app/)
 
 
-Features
+## Features
 
 Responsive layout optimized for desktop, tablet, and mobile.
 
