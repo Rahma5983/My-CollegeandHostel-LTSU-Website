@@ -1,9 +1,9 @@
-🏫 My College & Hostel — Lamrin Tech Skills University (LTSU), Punjab
+## 🏫 My College & Hostel — Lamrin Tech Skills University (LTSU), Punjab
 Project 2 | L&T Edutech Learning Program
 A clean, responsive, and user-friendly informational website designed for Lamrin Tech Skills University (LTSU) and its hostel facilities.
 This project provides essential information for students, parents, and visitors, including college details, hostel amenities, admissions, and contact information.
 This is a group project developed as part of the L&T Edutech Learning Program.
-📌 Table of Contents
+## 📌 Table of Contents
 About the Project
 Live Demo
 Features
