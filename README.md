@@ -43,35 +43,35 @@ Responsive layout optimized for desktop, tablet, and mobile.
 
 Pages for:
 
-Home / Welcome
+- Home / Welcome
 
-About the college
+- About the college
 
-Hostel facilities & rules
+- Hostel facilities & rules
 
-Admissions / How to Apply
+- Admissions / How to Apply
 
-Contact / Location (with an enquiry/contact form placeholder)
+- Contact / Location (with an enquiry/. contact form placeholder)
 
 
-Easy to extend static content
+- Easy to extend static content
 
-Accessible HTML structure and semantic markup
+- Accessible HTML structure and semantic markup
 
-Lightweight and fast: no unnecessary dependencies unless using a framework
+- Lightweight and fast: no unnecessary dependencies unless using a framework
 
 
 ## Tech stack
 
 List the stack actually used in the project (edit as needed). Typical options:
 
-HTML
+- HTML
 
-CSS
+- CSS
 
-Javascript
+- Javascript
 
-Bootstrap
+- Bootstrap
 
 
 ## Installation & local development
@@ -118,26 +118,25 @@ Program: L&T Edutech — Learning Program (this project was created as part of t
 
 ## Group members:
 
-Rahma Naqui
+- Rahma Naqui
 
-Aishwarya Ray
+- Aishwarya Ray
 
-Sakshi Yadav
+- Sakshi Yadav
 
-Neha Singh
+- Neha Singh
 
 
 ## Instructor/ Program
 
-NarendraKumar Gopineedi Sir
+- NarendraKumar Gopineedi Sir
 
 
 
 ## Contact
 
-Repository owner / maintainer: Rahma5983
+- Repository owner / maintainer: Rahma5983
 
 ## Acknowledgements
 
 Thanks to L&T Edutech for providing the learning program and the assignment.
-Improve this
