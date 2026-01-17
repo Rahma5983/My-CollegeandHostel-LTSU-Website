@@ -8,9 +8,9 @@ This project is a group project which we created as part of the L&T Edutech Lear
 
 ## 📌Table of Contents
 
-About
+- About
 
-Features
+- Features
 
 Tech stack
 
