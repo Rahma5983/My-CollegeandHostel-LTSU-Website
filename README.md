@@ -98,15 +98,15 @@ git clone https://github.com/Rahma5983/My-CollegeandHostel-LTSU-Website.git
 
 ---programs.html
 
-hostel.html
+---hostel.html
 
-notices.html
+---notices.html
 
-contact.html
+---contact.html
 
-apply.html
+---apply.html
 
-README.md
+---README.md
 
 
 
