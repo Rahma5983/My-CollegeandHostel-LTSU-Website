@@ -12,20 +12,20 @@ This project is a group project which we created as part of the L&T Edutech Lear
 
 - Features
 
-Tech stack
+- Tech stack
 
-Installation & local development
+- Installation & local development
 
    - Static site
 
 
-Project Structure
+- Project Structure
 
-Group & credits
+- Group & credits
 
-Contact
+- Contact
 
-Acknowledgement
+- Acknowledgement
 
 
 ## About
