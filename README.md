@@ -6,7 +6,7 @@ A clean, responsive informational website for a college and hostel (LTSU). This 
 
 This project is a group project which we created as part of the L&T Edutech Learning Program.
 
-## Table of Contents
+## 📌Table of Contents
 
 About
 
