@@ -16,7 +16,7 @@ Tech stack
 
 Installation & local development
 
-Static site
+   - Static site
 
 
 Project Structure
