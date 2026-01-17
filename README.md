@@ -94,9 +94,9 @@ git clone https://github.com/Rahma5983/My-CollegeandHostel-LTSU-Website.git
 
 / (root)
 
-index.html
+---index.html
 
-programs.html
+---programs.html
 
 hostel.html
 
