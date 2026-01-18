@@ -10,6 +10,8 @@ This project is a group project which we created as part of the L&T Edutech Lear
 
 - About
 
+- Quick Demo
+
 - Features
 
 - Tech stack
