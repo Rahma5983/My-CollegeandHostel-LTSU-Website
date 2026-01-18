@@ -56,11 +56,11 @@ This repository holds the website files for "My College & Hostel — LTSU". The 
 -- Contact / Location (with an enquiry/. contact form placeholder)
 
 
--- Easy to extend static content
+- Easy to extend static content
 
--- Accessible HTML structure and semantic markup
+- Accessible HTML structure and semantic markup
 
--- Lightweight and fast: no unnecessary dependencies unless using a framework
+- Lightweight and fast: no unnecessary dependencies unless using a framework
 
 
 ## Tech stack
