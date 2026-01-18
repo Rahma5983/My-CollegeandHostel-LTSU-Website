@@ -65,8 +65,6 @@ This repository holds the website files for "My College & Hostel — LTSU". The 
 
 ## Tech stack
 
-List the stack actually used in the project (edit as needed). Typical options:
-
 - HTML
 
 - CSS
