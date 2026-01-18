@@ -41,26 +41,26 @@ This repository holds the website files for "My College & Hostel — LTSU". The 
 
 ## Features
 
-Responsive layout optimized for desktop, tablet, and mobile.
+- Responsive layout optimized for desktop, tablet, and mobile.
 
-Pages for:
+- Pages for:
 
-- Home / Welcome
+-- Home / Welcome
 
-- About the college
+-- About the college
 
-- Hostel facilities & rules
+-- Hostel facilities & rules
 
-- Admissions / How to Apply
+-- Admissions / How to Apply
 
-- Contact / Location (with an enquiry/. contact form placeholder)
+-- Contact / Location (with an enquiry/. contact form placeholder)
 
 
-- Easy to extend static content
+-- Easy to extend static content
 
-- Accessible HTML structure and semantic markup
+-- Accessible HTML structure and semantic markup
 
-- Lightweight and fast: no unnecessary dependencies unless using a framework
+-- Lightweight and fast: no unnecessary dependencies unless using a framework
 
 
 ## Tech stack
