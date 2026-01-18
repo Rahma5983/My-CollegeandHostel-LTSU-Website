@@ -76,9 +76,7 @@ This repository holds the website files for "My College & Hostel — LTSU". The 
 
 ## Installation & local development
 
-Pick the set of instructions that matches your project setup.
-
-Static site (plain HTML/CSS/JS)
+- Static site (plain HTML/CSS/JS)
 
 1. Clone the repository:
 
@@ -112,9 +110,9 @@ git clone https://github.com/Rahma5983/My-CollegeandHostel-LTSU-Website.git
 
 ## Group & credits
 
-Project type: Group project
+- Project type: Group project
 
-Program: L&T Edutech — Learning Program (this project was created as part of the program's coursework/assignment)
+- Program: L&T Edutech — Learning Program (this project was created as part of the program's coursework/assignment)
 
 ## Group members:
 
