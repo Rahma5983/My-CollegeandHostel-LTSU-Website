@@ -36,7 +36,7 @@ This repository holds the website files for "My College & Hostel — LTSU". The 
 
 ## Quick demo
 
-Live site: (https://my-collegeand-hostel-ltsu-website.vercel.app/)
+- Live site: (https://my-collegeand-hostel-ltsu-website.vercel.app/)
 
 
 ## Features
